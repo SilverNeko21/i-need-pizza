@@ -19,13 +19,15 @@ var order11821 = {
   },
   Toppings: {
     Veggies: ["olives", "green peppers"],
-    Meats: ["pepperoni", "ham", "sausage"],
+    Meats: ["pepperoni", "ham", "sausage"]
   },
-    sideItems: "breadsticks", "bbq wings 6 piece",
+  Others: {
+    sideItems: ["breadsticks", "bbq wings 6 piece"],
     Sauces: "ranch",
     specialInstructions: "please cut into squares",
     paymentType: "cash",
     storeId: "112"
+  }
 };
 
 var order11372 = {
@@ -35,22 +37,24 @@ var order11372 = {
     City: "Beverly Hills",
     State: "CA",
     zipCode: "91833"
-  }
-  Pizza{
+  },
+  Pizza: {
     Crust: "stuffed crust",
     Sauce: "creamy garlic alfredo",
     Cheese: "double"
-  }
-  Toppings{
-    Veggies: "onion", "anchovies", "mushrooms",
-    Meats: "chicken", "bacon"
-  }   
-  Side Items: "double fudge brownie dessert",
-  Sauces: "bbq", "garlic sauce",
-  Special Instructions: "call 815 at the gate",
-  Payment Type: "credit card",
-  Store Id: "382"
+  },
+  Toppings: {
+    Veggies: ["onion", "anchovies", "mushrooms"],
+    Meats: ["chicken", "bacon"]
+  },
+  Others: {
+  sideItems: "double fudge brownie dessert",
+  Sauces: ["bbq", "garlic sauce"],
+  specialInstructions: "call 815 at the gate",
+  paymentType: "credit card",
+  storeId: "382"
 }
+};
 /*
 * Create a new variable named currentOrders
 * currentOrders should be single object containing both orders from above
@@ -66,4 +70,13 @@ var currentOrders = {
 * Console.log(currentOrders) to verify changes have been made
 */
 
-currentOrders.apples[0].Pizza.Sause = "classic marinara";
+currentOrders.apples[0].Pizza.Sauce = "classic marinara";
+
+currentOrders.apples[0].Toppings.Veggies.push("Spinarch");
+
+currentOrders.apples[0].Toppings.Meats.pop();
+
+currentOrders.apples[0].Others.orderTime = "20 minutes";
+
+console.log(currentOrders.apples[0])
+
